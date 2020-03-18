@@ -1,0 +1,18 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\Entity\User
+    service:
+        mailer: fos_user.mailer.twig_swift
+        resetting:
+            email:
+                template:   email/password_resetting.email.twig
+        registration:
+            confirmation:
+                template:   '@FOSUser/Registration/email.txt.twig'
+            from_email:
+                address: "amit@homescapesonline.com"
+                sender_name: "amit"
+
+framework:
+    translator: ~

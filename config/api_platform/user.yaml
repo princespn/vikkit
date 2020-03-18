@@ -1,0 +1,4 @@
+App\Entity\User:
+  properties:
+    id:
+      identifier: true
