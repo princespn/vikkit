@@ -25,6 +25,7 @@ class BeforeActionSubscriber implements EventSubscriberInterface
     {
         return array(
             KernelEvents::CONTROLLER => 'convertJsonStringToArray',
+            FOSUserEvents::REGISTRATION_FAILURE => 'registerationFailed',
             FOSUserEvents::REGISTRATION_INITIALIZE => 'registerationInit',
             FOSUserEvents::REGISTRATION_FAILURE => 'registerationFailed',
             FOSUserEvents::REGISTRATION_SUCCESS =>  ['registerationCompleted', -100],
